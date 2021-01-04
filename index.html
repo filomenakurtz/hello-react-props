@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React (props)</title>
+</head>
+<body>
+     <!--empty element-->
+     <div id="root"></div>
+     <!--React-->
+     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js" ></script>
+     <!--React Dom-->
+     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" ></script>
+     <!--Babel-->
+     <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+ <script type = "text/babel">
+ function Hello (props){
+// console.log (props.name)
+     return (
+         <div>
+         <h1> Hello,{props.name}</h1>
+         <h2>{props.tagLine}</h2>
+         </div>
+     )
+ }
+ 
+ const element = (
+     <div>
+        <Hello name ="Cramer" tagLine= "Supper Cool"/>
+        <Hello name ="Tim"tagLine= "Glasses suck"/>
+        <Hello name ="Maria" tagLine= "Woot Beets"/>
+        </div>
+ )
+
+   // Actual Render to the page 
+   ReactDOM.render(element,document.getElementById('root')
+            );
+ 
+ 
+ </script>
+
+
+
+</body>
+</html>
